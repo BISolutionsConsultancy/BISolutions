@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BI Solutions | Smarter Systems. Better Business.</title>
-<meta name="description" content="BI Solutions is a consultancy led by licensed engineers, offering regulatory, business consulting and data management solutions, plus a digital store of ready-to-use business tools.">
+<meta name="description" content="BI Solutions offers regulatory, business consulting and data management solutions, plus a digital store of ready-to-use business tools for SMEs in the Philippines.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,7 +77,7 @@ footer{background:var(--navy);color:#fff;padding:40px 0 28px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between}
 footer p{margin:0 0 8px;color:#d3e3f3;max-width:48ch}
 footer a{color:#fff}
-.copy{width:100%;border-top:1px solid rgba(255,255,255,.2);padding-top:16px;font-size:.85rem;color:#b9cde3}
+.trust{background:var(--gray);border-bottom:1px solid var(--line)}.trust .wrap{display:flex;flex-wrap:wrap;gap:10px 26px;padding-top:12px;padding-bottom:12px;font-size:.9rem;font-weight:700;color:var(--navy)}.trust span:before{content:"✓ ";color:var(--accent)}.badgebox img{background:#fff;border-radius:8px;padding:8px;display:block;max-width:100%;height:auto}.badgebox:empty{display:none}.copy{width:100%;border-top:1px solid rgba(255,255,255,.2);padding-top:16px;font-size:.85rem;color:#b9cde3}
 dialog{border:0;border-radius:14px;padding:0;width:min(520px,94vw);max-height:92vh;background:#fff;color:var(--ink)}
 dialog::backdrop{background:rgba(10,22,44,.6)}
 .dbody{padding:24px}
@@ -103,90 +103,81 @@ input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:
 <div class="hero" id="home"><div class="wrap">
   <p class="eyebrow">BI Solutions</p>
   <h1>Smarter Systems. Better Business.</h1>
-  <p class="tag">Engineering Expertise. Regulatory Solutions. Data-Driven Decisions.</p>
-  <p class="d">BI Solutions is a professional consultancy led by licensed engineers, providing practical business, regulatory, and data management solutions for individuals, SMEs, and growing organizations. We help businesses streamline operations, navigate regulatory requirements, improve internal processes, and transform data into meaningful insights. Explore our ready-to-use digital tools or work with us to develop solutions tailored to your business needs.</p>
+  <p class="tag">Regulatory Solutions. Business Consulting. Data-Driven Decisions.</p>
+  <p class="d">Practical business, regulatory, and data solutions for SMEs and growing organizations. Shop ready-to-use tools, or work with us on something built around your operations.</p>
   <div class="btns"><a class="btn light" href="#store">Explore Digital Products</a><a class="btn ghost" href="#services">Explore Our Services</a></div>
 </div></div>
+<div class="trust" id="trust" hidden><div class="wrap" id="trustItems"></div></div>
 
 <section id="store"><div class="wrap">
   <p class="eyebrow" style="color:var(--accent)">Our Digital Store</p>
   <h2>Practical Tools for Everyday Business</h2>
-  <p class="sub">Discover ready-to-use business templates, spreadsheets, dashboards, and management tools designed to simplify your operations. From financial monitoring and inventory management to business reporting and productivity systems, each product is designed with usability, organization, and real business applications in mind.</p>
+  <p class="sub">Ready-to-use templates, spreadsheets, and dashboards that simplify your daily operations.</p>
   <div class="filters" id="filters" hidden></div>
   <div class="grid" id="grid"></div>
 </div></section>
 
 <section id="services" class="gray"><div class="wrap">
-  <p class="eyebrow" style="color:var(--accent)">Practical expertise. Integrated business solutions.</p>
   <h2>Our Services</h2>
-  <p class="sub">Professional consulting for businesses that need more than a ready-made tool.</p>
+  <p class="sub">Need more than a ready-made tool? We also work with businesses directly.</p>
   <div class="svc">
-    <article><small>01</small><h3>Regulatory &amp; Compliance Solutions</h3><p>Navigate regulatory requirements with professional guidance and structured documentation support.</p><ul>
-      <li><b>ISO Consultation:</b> Documentation, implementation support, and internal audits for ISO 9001:2015 and related standards.</li>
-      <li><b>FDA Assistance:</b> Support for License to Operate (LTO), Certificate of Product Registration (CPR), and applicable product registration requirements.</li>
-      <li><b>Government Permitting:</b> Assistance with NWRB, municipal, engineering, building, sanitary, and environmental requirements.</li></ul></article>
-    <article><small>02</small><h3>Business Consulting &amp; Analysis</h3><p>Improve your business processes through structured analysis, effective systems, and measurable performance indicators.</p><ul>
-      <li><b>System Integration:</b> Aligning business processes with appropriate management systems and applicable standards.</li>
-      <li><b>Process Mapping:</b> Identifying operational bottlenecks and developing more efficient workflows.</li>
-      <li><b>Performance Tracking:</b> Establishing KPIs and monitoring systems aligned with business objectives.</li>
-      <li><b>Business Health Checks:</b> Reviewing existing operations and identifying improvement opportunities and compliance gaps.</li></ul></article>
-    <article><small>03</small><h3>Data &amp; Management Tools</h3><p>Turn business data into actionable insights through practical reporting systems and management tools.</p><ul>
-      <li><b>Automated Dashboards:</b> Customized Power BI, Excel, Google Sheets, and Looker Studio solutions.</li>
-      <li><b>Business Trackers:</b> Monitoring systems for sales, inventory, expenses, operations, and performance.</li>
-      <li><b>Reporting Tools:</b> Structured templates for monitoring costs, productivity, timelines, and business results.</li>
-      <li><b>Process Visualization:</b> Professional flowcharts and process documentation for operational clarity.</li></ul></article>
+    <article><small>01</small><h3>Regulatory &amp; Compliance</h3><p>Guidance and documentation support for the permits and standards your business needs.</p><ul>
+      <li>ISO 9001:2015 consultation and internal audits</li>
+      <li>FDA LTO, CPR, and product registration</li>
+      <li>Government permitting (NWRB, municipal, building, sanitary, environmental)</li></ul></article>
+    <article><small>02</small><h3>Business Consulting &amp; Analysis</h3><p>Clearer processes and measurable performance.</p><ul>
+      <li>System integration and process mapping</li>
+      <li>KPIs and performance tracking</li>
+      <li>Business health checks</li></ul></article>
+    <article><small>03</small><h3>Data &amp; Management Tools</h3><p>Reports and dashboards your team can actually use.</p><ul>
+      <li>Custom Power BI, Excel, Google Sheets, and Looker Studio dashboards</li>
+      <li>Business trackers and reporting templates</li>
+      <li>Process flowcharts</li></ul></article>
   </div>
-  <p style="margin:26px 0 0"><a class="btn" href="#contact">Discuss Your Business Requirements</a></p>
+  <p style="margin:26px 0 0"><a class="btn" href="#contact">Discuss Your Requirements</a></p>
 </div></section>
 
 <section id="about"><div class="wrap">
   <h2>About Us</h2>
-  <p class="sub">BI Solutions is led by a team of licensed engineers dedicated to building smarter, compliant, and data-driven operations. We combine engineering discipline with regulatory expertise, serving as a professional partner for individuals, SMEs, and growing organizations.</p>
-  <h2 style="font-size:1.4rem;margin-top:34px">Why Choose BI Solutions?</h2>
+  <p class="sub">BI Solutions is a business consultancy helping individuals, SMEs, and growing organizations build smarter, compliant, data-driven operations.</p>
   <div class="cols">
-    <div><b>End-to-End Support</b><p>From regulatory documentation and business process improvement to data analytics and management reporting, we provide coordinated support based on your requirements.</p></div>
-    <div><b>Workflow-First Approach</b><p>We develop systems around your actual business processes, ensuring that solutions are practical and relevant to everyday operations.</p></div>
-    <div><b>Practical &amp; Affordable</b><p>We focus on accessible solutions that help individuals and growing businesses improve their operations without unnecessary complexity.</p></div>
-    <div><b>Ease of Implementation</b><p>Our goal is to develop structured, understandable systems that your team can adopt, use, and maintain.</p></div>
+    <div><b>End-to-End Support</b><p>From permits to process improvement to reporting.</p></div>
+    <div><b>Workflow-First</b><p>Built around how your business actually runs.</p></div>
+    <div><b>Practical &amp; Affordable</b><p>Useful solutions without unnecessary complexity.</p></div>
+    <div><b>Easy to Adopt</b><p>Simple systems your team can use and maintain.</p></div>
   </div>
 </div></section>
 
 <section id="how" class="gray"><div class="wrap">
   <h2>How It Works</h2>
-  <p class="sub">No account needed.</p>
-  <div class="cols">
-    <div><b>01. Explore</b><p>Browse our digital products or learn more about our professional services.</p></div>
-    <div><b>02. Choose Your Solution</b><p>Select a ready-made digital tool or tell us about your business requirements.</p></div>
-    <div><b>03. Get Started</b><p>For digital products, complete your order and receive your files after payment verification. For consulting projects, we'll discuss your requirements and provide a suitable proposal.</p></div>
-    <div><b>04. Put It Into Practice</b><p>Implement your selected solution and start improving the way you manage your business.</p></div>
+  <div class="cols" style="margin-top:22px">
+    <div><b>01. Explore</b><p>Browse our products or services.</p></div>
+    <div><b>02. Choose</b><p>Pick a ready-made tool, or tell us what you need.</p></div>
+    <div><b>03. Order</b><p>Pay by GCash or bank transfer. We email your files once payment is verified.</p></div>
+    <div><b>04. Use it</b><p>Start running your business with it.</p></div>
   </div>
 </div></section>
 
 <section><div class="wrap"><div class="cta">
-  <h2>Need a Custom Business Solution?</h2>
-  <p>Every business has different operational challenges. If our ready-made products do not fully meet your requirements, BI Solutions can help develop a customized system based on your processes, data, and business objectives. Whether you need a management dashboard, automated tracker, regulatory documentation, or process improvement support, let's discuss how we can help.</p>
+  <h2>Need Something Custom?</h2>
+  <p>We can build a dashboard, tracker, or system around your processes and data.</p>
   <a class="btn light" href="#contact">Request a Consultation</a>
 </div></div></section>
 
 <section id="faq" class="gray"><div class="wrap">
-  <h2>Frequently Asked Questions</h2>
-  <details><summary>What can I purchase from the BI Solutions Digital Store?</summary><p>Our store offers ready-to-use business templates, spreadsheets, dashboards, management tools, and other digital resources designed to support everyday business operations.</p></details>
-  <details><summary>Do I need an account to purchase a digital product?</summary><p>No. You can browse our products and place an order without creating an account.</p></details>
-  <details><summary>How will I receive my digital purchase?</summary><p>Once your payment has been verified, we will send the product access or download instructions to the email address you provided.</p></details>
-  <details><summary>Can BI Solutions customize a product for my business?</summary><p>Yes. We also offer customized dashboards, business trackers, management systems, and other solutions based on your specific requirements.</p></details>
-  <details><summary>Does BI Solutions provide consulting services?</summary><p>Yes. Our professional services cover regulatory and compliance solutions, business consulting and analysis, and data and management tools.</p></details>
-  <details><summary>How can I request a quotation?</summary><p>Contact us and provide a brief description of your requirements. Our team will review your needs and discuss the appropriate next steps.</p></details>
-  <details><summary>What if I need assistance with a purchased product?</summary><p>We provide product instructions and basic support to help you get started. You may contact us if you encounter an issue with your purchased digital product.</p></details>
+  <h2>FAQ</h2>
+  <details><summary>Do I need an account to buy?</summary><p>No. Just place an order and follow the payment steps.</p></details>
+  <details><summary>How do I receive my purchase?</summary><p>After we verify your payment, we email the access or download link to the address you provided.</p></details>
+  <details><summary>Can you customize a product for my business?</summary><p>Yes. Contact us with your requirements for a quotation.</p></details>
+  <details><summary>What if I need help with a product?</summary><p>We provide instructions and basic support. Just contact us.</p></details>
 </div></section>
 </main>
 
 <footer id="contact"><div class="wrap">
-  <div><b>BI SOLUTIONS — Smarter Systems. Better Business.</b>
-    <p>Professional business, regulatory, and data management solutions designed to help organizations operate efficiently and make informed decisions.</p>
-    <p>For product inquiries, consulting engagements, and business partnerships, please get in touch with our team.</p>
-    <p><a href="#store">Digital Store</a> | <a href="#services">Our Services</a> | <a href="#how">How It Works</a> | <a href="#faq">FAQ</a></p></div>
-  <div><b>Contact</b><p>Cityland Pasong Tamo, Makati City<br>+63 966 210 3220<br><a href="mailto:brenrelevo@gmail.com">brenrelevo@gmail.com</a><br><a href="mailto:ipdevenecia@gmail.com">ipdevenecia@gmail.com</a></p></div>
-  <div class="copy">© 2026 BI Solutions. All Rights Reserved.</div>
+  <div><b>BI SOLUTIONS</b><p>Smarter Systems. Better Business.</p><p><a href="#store">Digital Store</a> | <a href="#services">Our Services</a> | <a href="#faq">FAQ</a></p></div>
+  <div><b>Contact</b><p>Office: Cityland Pasong Tamo, Makati City<br>+63 966 210 3220<br><a href="mailto:brenrelevo@gmail.com">brenrelevo@gmail.com</a><br><a href="mailto:ipdevenecia@gmail.com">ipdevenecia@gmail.com</a></p></div>
+  <div id="badgeBox" class="badgebox"></div>
+  <div class="copy"><span id="regline"></span>© 2026 BI Solutions. All Rights Reserved.</div>
 </div></footer>
 
 <dialog id="dlg"><div class="dbody">
@@ -222,6 +213,14 @@ input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:
 // ---- EDIT THESE ----
 const SCRIPT_URL = "";  // paste your Google Apps Script web app URL here (added in the next step)
 const SUPPORT_EMAIL = "brenrelevo@gmail.com";
+// Registration details shown on the site. Leave a value empty ("") to hide it.
+const REG = {
+  businessName: "BI SOLNS BUSINESS CONSULTANCY",
+  dti: "8493859",                       // DTI Business Name No.
+  address: "Blk 61 Lot 18 Fort Knox Drive, Southspring Estate, Canlalay, City of Biñan, Laguna",
+  birBadge: "bir-badge.png",            // BIR Registration Seal Badge image ("" to hide)
+  showBadges: true
+};
 const PAYMENT = {
   "GCash": "Send to GCash 0966 210 3220 (account name: YOUR NAME).",
   "Bank transfer": "Bank: YOUR BANK | Account name: YOUR NAME | Account no.: 0000-0000-00"
@@ -235,7 +234,16 @@ const PRODUCTS = [
    lim:["A recordkeeping and BIR-preparation support tool","It does not file BIR returns, issue authorized invoices, or replace registered books of accounts","It does not calculate every taxpayer's tax liability"]}
 ];
 // ---------------------
-const $=id=>document.getElementById(id), peso=n=>"₱"+n.toLocaleString("en-PH");
+const $=id=>document.getElementById(id);
+(function(){
+  if(!REG.showBadges)return;
+  const it=[];if(REG.dti)it.push("DTI-registered business name");if(REG.birBadge)it.push("BIR-registered");
+  if(it.length){$("trustItems").innerHTML=it.map(x=>`<span>${x}</span>`).join("");$("trust").hidden=false;}
+  const l=[];if(REG.businessName)l.push("Registered business name: "+REG.businessName);if(REG.dti)l.push("DTI Business Name No. "+REG.dti);if(REG.address)l.push(REG.address);
+  if(l.length)$("regline").innerHTML=l.join("<br>")+"<br><br>";
+  if(REG.birBadge)$("badgeBox").innerHTML=`<img src="${REG.birBadge}" alt="BIR Registration Seal Badge" width="260">`;
+})();
+const peso=n=>"₱"+n.toLocaleString("en-PH");
 const grid=$("grid"), filters=$("filters"), dlg=$("dlg");
 let active="All", cur=null, ref="";
 const li=a=>a.map(x=>`<li>${x}</li>`).join("");
