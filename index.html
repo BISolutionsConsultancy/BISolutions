@@ -3,213 +3,289 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BI Solutions Digital Store | Templates, dashboards, training and tools</title>
-<meta name="description" content="The digital store of BI Solutions: business templates, dashboards, training materials and tools from licensed engineers.">
+<title>BI Solutions | Smarter Systems. Better Business.</title>
+<meta name="description" content="BI Solutions is a consultancy led by licensed engineers, offering regulatory, business consulting and data management solutions, plus a digital store of ready-to-use business tools.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--deep:#0f3468;--navy:#1b4f8f;--blue:#1b64a8;--sky:#3797cf;--mist:#dde9f1;--paper:#f4f8fb;--ink:#0d2140;--muted:#52647c;--line:#d3e0ea}
+:root{--navy:#203b65;--steel:#315b8c;--accent:#3b9dd1;--gray:#f4f6f9;--ink:#14243d;--muted:#55657d;--line:#d8e0ea}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:"Schibsted Grotesk",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:"Schibsted Grotesk",system-ui,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{height:50px;width:50px;object-fit:contain}
-.brand b{font-size:1.05rem;color:var(--deep);letter-spacing:-.01em;line-height:1.1}
-.brand small{display:block;font-weight:500;color:var(--muted);font-size:.75rem}
-nav a{margin-left:20px;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--deep)}
-nav a:hover{color:var(--sky)}
-.hero{background:linear-gradient(135deg,var(--deep),var(--blue));color:#fff;padding:70px 0 64px;position:relative;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative}
-h1{font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;font-weight:900}
-.hero p{font-size:1.1rem;color:#d6e6f5;max-width:48ch;margin:0 0 26px}
-.btn{display:inline-block;background:var(--sky);color:#fff;border:0;border-radius:8px;padding:12px 22px;font:700 1rem inherit;font-family:inherit;text-decoration:none;cursor:pointer}
-.btn:hover{background:#2b86bf}
-.hero .btn{background:#fff;color:var(--deep)}
-.hero .btn:hover{background:var(--mist)}
-.btn.ghost{background:transparent;color:var(--deep);border:2px solid var(--line);margin-left:8px}
-.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.45)}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.tiles div{border-radius:12px;padding:18px 14px;font-weight:700;color:#fff;min-height:92px;display:flex;align-items:flex-end}
-.tiles div:nth-child(1){background:rgba(255,255,255,.14)}
-.tiles div:nth-child(2){background:var(--sky)}
-.tiles div:nth-child(3){background:#0b2a55}
-.tiles div:nth-child(4){background:rgba(255,255,255,.14)}
-section{padding:52px 0}
-h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 8px;color:var(--deep)}
-.sub{color:var(--muted);margin:0 0 24px;max-width:62ch}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;color:var(--navy)}
+.brand img{height:48px;width:48px;object-fit:contain}
+nav a{margin-left:20px;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--navy)}
+nav a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:12px 22px;font:700 1rem inherit;font-family:inherit;text-decoration:none;cursor:pointer}
+.btn:hover{background:#2c88ba}
+.btn.light{background:#fff;color:var(--navy)}.btn.light:hover{background:var(--gray)}
+.btn.ghost{background:transparent;color:var(--navy);border:2px solid var(--line)}
+.hero{background:linear-gradient(135deg,var(--navy),var(--steel));color:#fff;padding:84px 0 76px}
+.eyebrow{font-weight:700;letter-spacing:.12em;font-size:.8rem;text-transform:uppercase;color:#9fd2ee;margin:0 0 10px}
+h1{font-size:clamp(2.3rem,5.5vw,3.8rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 12px;font-weight:900}
+.hero .tag{font-size:1.15rem;font-weight:700;margin:0 0 16px}
+.hero p.d{color:#d3e3f3;max-width:60ch;margin:0 0 26px;font-size:1.05rem}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.5)}
+section{padding:60px 0}
+.gray{background:var(--gray)}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.02em;margin:0 0 10px;color:var(--navy);line-height:1.15}
+.sub{color:var(--muted);margin:0 0 28px;max-width:64ch}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.filters button{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:7px 16px;font:500 .92rem inherit;font-family:inherit;color:var(--deep);cursor:pointer}
-.filters button[aria-pressed=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+.filters button{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:7px 16px;font:500 .92rem inherit;font-family:inherit;color:var(--navy);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
-.thumb{height:140px;background:linear-gradient(135deg,var(--deep),var(--blue));position:relative;overflow:hidden}
+.thumb{height:150px;background:linear-gradient(135deg,var(--navy),var(--steel));position:relative;overflow:hidden}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .thumb i{position:absolute;transform:rotate(45deg);border-radius:4px}
-.thumb i:nth-child(1){width:70px;height:70px;right:34px;top:34px;background:var(--sky)}
-.thumb i:nth-child(2){width:36px;height:36px;right:112px;top:84px;background:var(--mist);opacity:.9}
-.thumb i:nth-child(3){width:26px;height:26px;right:18px;top:96px;background:#0b2a55}
-.cat{position:absolute;left:12px;top:12px;background:#fff;color:var(--deep);font-size:.78rem;font-weight:700;border-radius:99px;padding:2px 10px}
-.card .body{padding:18px;display:flex;flex-direction:column;flex:1}
-.card h3{margin:0 0 6px;font-size:1.15rem;color:var(--deep)}
+.thumb i:nth-child(1){width:70px;height:70px;right:34px;top:36px;background:var(--accent)}
+.thumb i:nth-child(2){width:34px;height:34px;right:112px;top:88px;background:#dde9f1}
+.thumb i:nth-child(3){width:24px;height:24px;right:18px;top:100px;background:var(--navy)}
+.cat{position:absolute;left:12px;top:12px;background:#fff;color:var(--navy);font-size:.78rem;font-weight:700;border-radius:99px;padding:2px 10px}
+.body{padding:18px;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 6px;font-size:1.15rem;color:var(--navy)}
 .card p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.tags span{background:var(--mist);color:var(--deep);border-radius:99px;padding:2px 10px;font-size:.78rem}
-.buy{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
-.price{font-size:1.4rem;font-weight:900;color:var(--deep)}
-.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.how div{border-left:4px solid var(--sky);padding:4px 0 4px 14px}
-.how b{display:block;margin-bottom:4px;color:var(--deep)}
-.how p{margin:0;color:var(--muted);font-size:.95rem}
+.tags span{background:#e6f1f8;color:var(--navy);border-radius:99px;padding:2px 10px;font-size:.78rem}
+.buy{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.price{font-size:1.4rem;font-weight:900;color:var(--navy)}
+.buy .btn{padding:10px 16px;font-size:.95rem}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.svc article{background:#fff;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:22px}
+.svc small{color:var(--accent);font-weight:900}
+.svc h3{margin:2px 0 8px;color:var(--navy)}
+.svc p{color:var(--muted);margin:0 0 10px}
+.svc ul{margin:0;padding-left:18px;font-size:.93rem}.svc li{margin-bottom:6px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.cols div{border-left:4px solid var(--accent);padding:2px 0 2px 14px}
+.cols b{display:block;color:var(--navy);margin-bottom:4px}
+.cols p{margin:0;color:var(--muted);font-size:.95rem}
+.cta{background:var(--navy);color:#fff;border-radius:16px;padding:40px;text-align:center}
+.cta h2{color:#fff}.cta p{color:#d3e3f3;max-width:62ch;margin:0 auto 22px}
 details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
-summary{font-weight:700;cursor:pointer;color:var(--deep)}
+summary{font-weight:700;cursor:pointer;color:var(--navy)}
 details p{margin:10px 0 0;color:var(--muted)}
-footer{background:var(--deep);color:#fff;padding:36px 0}
-footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+footer{background:var(--navy);color:#fff;padding:40px 0 28px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between}
+footer p{margin:0 0 8px;color:#d3e3f3;max-width:48ch}
 footer a{color:#fff}
-dialog{border:0;border-radius:14px;padding:0;width:min(480px,94vw);background:#fff;color:var(--ink)}
-dialog::backdrop{background:rgba(8,20,40,.6)}
-dialog form{padding:24px}
-dialog h3{margin:0 0 4px;color:var(--deep)}
+.copy{width:100%;border-top:1px solid rgba(255,255,255,.2);padding-top:16px;font-size:.85rem;color:#b9cde3}
+dialog{border:0;border-radius:14px;padding:0;width:min(520px,94vw);max-height:92vh;background:#fff;color:var(--ink)}
+dialog::backdrop{background:rgba(10,22,44,.6)}
+.dbody{padding:24px}
+dialog h3{margin:0 0 4px;color:var(--navy)}
+dialog h4{margin:16px 0 4px;font-size:.9rem;color:var(--navy);text-transform:uppercase;letter-spacing:.05em}
+dialog ul{margin:0;padding-left:18px;color:var(--muted);font-size:.93rem}
 label{display:block;font-weight:500;font-size:.9rem;margin:12px 0 4px}
-input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--paper);color:var(--ink)}
-.pay{background:var(--mist);border-radius:8px;padding:12px;font-size:.9rem;margin-top:12px}
-.row{display:flex;gap:10px;margin-top:18px}
+input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--gray)}
+.box{background:#e6f1f8;border-radius:8px;padding:12px;font-size:.92rem;margin-top:12px}
+.row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
 .msg{margin-top:12px;font-weight:500}
-@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.brand small{display:none}nav a:not(.keep){display:none}}
+[hidden]{display:none!important}
+@media (max-width:820px){nav a:not(.keep){display:none}.cta{padding:28px 18px}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <a class="brand" href="#"><img src="logo.png" alt="BI Solutions logo"><b>BI Solutions<small>Digital Store</small></b></a>
-  <nav><a href="#products">Shop</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="keep" href="#contact">Contact</a></nav>
+  <a class="brand" href="#home"><img src="logo.png" alt="BI Solutions logo">BI Solutions</a>
+  <nav><a href="#store">Digital Store</a><a href="#services">Our Services</a><a href="#about">About Us</a><a class="keep" href="#contact">Contact</a></nav>
 </div></header>
 
 <main>
-<div class="hero"><div class="wrap">
-  <div>
-    <h1>The digital store of BI Solutions.</h1>
-    <p>Business-ready templates, dashboards, training materials and tools, made by licensed engineers. Buy once, download, and put them to work in your operations.</p>
-    <a class="btn" href="#products">Shop now</a><a class="btn ghost" href="#how">How it works</a>
-  </div>
-  <div class="tiles" aria-hidden="true"><div>Dashboards</div><div>Templates</div><div>Training</div><div>Tools</div></div>
+<div class="hero" id="home"><div class="wrap">
+  <p class="eyebrow">BI Solutions</p>
+  <h1>Smarter Systems. Better Business.</h1>
+  <p class="tag">Engineering Expertise. Regulatory Solutions. Data-Driven Decisions.</p>
+  <p class="d">BI Solutions is a professional consultancy led by licensed engineers, providing practical business, regulatory, and data management solutions for individuals, SMEs, and growing organizations. We help businesses streamline operations, navigate regulatory requirements, improve internal processes, and transform data into meaningful insights. Explore our ready-to-use digital tools or work with us to develop solutions tailored to your business needs.</p>
+  <div class="btns"><a class="btn light" href="#store">Explore Digital Products</a><a class="btn ghost" href="#services">Explore Our Services</a></div>
 </div></div>
 
-<section id="products"><div class="wrap">
-  <h2>Shop</h2>
-  <p class="sub">New products are added regularly. Every item is built from real client work, not generic filler.</p>
+<section id="store"><div class="wrap">
+  <p class="eyebrow" style="color:var(--accent)">Our Digital Store</p>
+  <h2>Practical Tools for Everyday Business</h2>
+  <p class="sub">Discover ready-to-use business templates, spreadsheets, dashboards, and management tools designed to simplify your operations. From financial monitoring and inventory management to business reporting and productivity systems, each product is designed with usability, organization, and real business applications in mind.</p>
   <div class="filters" id="filters" hidden></div>
   <div class="grid" id="grid"></div>
 </div></section>
 
-<section id="how" class="alt"><div class="wrap">
-  <h2>How it works</h2>
-  <p class="sub">No account needed. Pay by GCash or bank transfer and get your files by email.</p>
-  <div class="how">
-    <div><b>Pick a product</b><p>Click Buy and fill in your details.</p></div>
-    <div><b>Send payment</b><p>Pay via GCash or bank transfer and send your proof of payment.</p></div>
-    <div><b>Receive your files</b><p>We verify the payment and email your download link, usually within one business day.</p></div>
-    <div><b>Need something custom?</b><p>BI Solutions also does consulting, compliance and custom dashboards. Message us for a quote.</p></div>
+<section id="services" class="gray"><div class="wrap">
+  <p class="eyebrow" style="color:var(--accent)">Practical expertise. Integrated business solutions.</p>
+  <h2>Our Services</h2>
+  <p class="sub">Professional consulting for businesses that need more than a ready-made tool.</p>
+  <div class="svc">
+    <article><small>01</small><h3>Regulatory &amp; Compliance Solutions</h3><p>Navigate regulatory requirements with professional guidance and structured documentation support.</p><ul>
+      <li><b>ISO Consultation:</b> Documentation, implementation support, and internal audits for ISO 9001:2015 and related standards.</li>
+      <li><b>FDA Assistance:</b> Support for License to Operate (LTO), Certificate of Product Registration (CPR), and applicable product registration requirements.</li>
+      <li><b>Government Permitting:</b> Assistance with NWRB, municipal, engineering, building, sanitary, and environmental requirements.</li></ul></article>
+    <article><small>02</small><h3>Business Consulting &amp; Analysis</h3><p>Improve your business processes through structured analysis, effective systems, and measurable performance indicators.</p><ul>
+      <li><b>System Integration:</b> Aligning business processes with appropriate management systems and applicable standards.</li>
+      <li><b>Process Mapping:</b> Identifying operational bottlenecks and developing more efficient workflows.</li>
+      <li><b>Performance Tracking:</b> Establishing KPIs and monitoring systems aligned with business objectives.</li>
+      <li><b>Business Health Checks:</b> Reviewing existing operations and identifying improvement opportunities and compliance gaps.</li></ul></article>
+    <article><small>03</small><h3>Data &amp; Management Tools</h3><p>Turn business data into actionable insights through practical reporting systems and management tools.</p><ul>
+      <li><b>Automated Dashboards:</b> Customized Power BI, Excel, Google Sheets, and Looker Studio solutions.</li>
+      <li><b>Business Trackers:</b> Monitoring systems for sales, inventory, expenses, operations, and performance.</li>
+      <li><b>Reporting Tools:</b> Structured templates for monitoring costs, productivity, timelines, and business results.</li>
+      <li><b>Process Visualization:</b> Professional flowcharts and process documentation for operational clarity.</li></ul></article>
+  </div>
+  <p style="margin:26px 0 0"><a class="btn" href="#contact">Discuss Your Business Requirements</a></p>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <h2>About Us</h2>
+  <p class="sub">BI Solutions is led by a team of licensed engineers dedicated to building smarter, compliant, and data-driven operations. We combine engineering discipline with regulatory expertise, serving as a professional partner for individuals, SMEs, and growing organizations.</p>
+  <h2 style="font-size:1.4rem;margin-top:34px">Why Choose BI Solutions?</h2>
+  <div class="cols">
+    <div><b>End-to-End Support</b><p>From regulatory documentation and business process improvement to data analytics and management reporting, we provide coordinated support based on your requirements.</p></div>
+    <div><b>Workflow-First Approach</b><p>We develop systems around your actual business processes, ensuring that solutions are practical and relevant to everyday operations.</p></div>
+    <div><b>Practical &amp; Affordable</b><p>We focus on accessible solutions that help individuals and growing businesses improve their operations without unnecessary complexity.</p></div>
+    <div><b>Ease of Implementation</b><p>Our goal is to develop structured, understandable systems that your team can adopt, use, and maintain.</p></div>
   </div>
 </div></section>
 
-<section id="faq"><div class="wrap">
-  <h2>Questions</h2>
-  <details><summary>What can I buy here?</summary><p>Templates, dashboards, training materials, video tutorials and other digital tools. Each product page shows its format and what's included.</p></details>
-  <details><summary>How do I receive my purchase?</summary><p>After we confirm your payment, we email a download or access link to the address you provided.</p></details>
-  <details><summary>Can I get something customized?</summary><p>Yes. Contact us with your process and data sources and we'll send a quote.</p></details>
-  <details><summary>What if something doesn't work?</summary><p>Email us and we'll help you get it running or send a corrected file.</p></details>
+<section id="how" class="gray"><div class="wrap">
+  <h2>How It Works</h2>
+  <p class="sub">No account needed.</p>
+  <div class="cols">
+    <div><b>01. Explore</b><p>Browse our digital products or learn more about our professional services.</p></div>
+    <div><b>02. Choose Your Solution</b><p>Select a ready-made digital tool or tell us about your business requirements.</p></div>
+    <div><b>03. Get Started</b><p>For digital products, complete your order and receive your files after payment verification. For consulting projects, we'll discuss your requirements and provide a suitable proposal.</p></div>
+    <div><b>04. Put It Into Practice</b><p>Implement your selected solution and start improving the way you manage your business.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap"><div class="cta">
+  <h2>Need a Custom Business Solution?</h2>
+  <p>Every business has different operational challenges. If our ready-made products do not fully meet your requirements, BI Solutions can help develop a customized system based on your processes, data, and business objectives. Whether you need a management dashboard, automated tracker, regulatory documentation, or process improvement support, let's discuss how we can help.</p>
+  <a class="btn light" href="#contact">Request a Consultation</a>
+</div></div></section>
+
+<section id="faq" class="gray"><div class="wrap">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What can I purchase from the BI Solutions Digital Store?</summary><p>Our store offers ready-to-use business templates, spreadsheets, dashboards, management tools, and other digital resources designed to support everyday business operations.</p></details>
+  <details><summary>Do I need an account to purchase a digital product?</summary><p>No. You can browse our products and place an order without creating an account.</p></details>
+  <details><summary>How will I receive my digital purchase?</summary><p>Once your payment has been verified, we will send the product access or download instructions to the email address you provided.</p></details>
+  <details><summary>Can BI Solutions customize a product for my business?</summary><p>Yes. We also offer customized dashboards, business trackers, management systems, and other solutions based on your specific requirements.</p></details>
+  <details><summary>Does BI Solutions provide consulting services?</summary><p>Yes. Our professional services cover regulatory and compliance solutions, business consulting and analysis, and data and management tools.</p></details>
+  <details><summary>How can I request a quotation?</summary><p>Contact us and provide a brief description of your requirements. Our team will review your needs and discuss the appropriate next steps.</p></details>
+  <details><summary>What if I need assistance with a purchased product?</summary><p>We provide product instructions and basic support to help you get started. You may contact us if you encounter an issue with your purchased digital product.</p></details>
 </div></section>
 </main>
 
 <footer id="contact"><div class="wrap">
-  <div><b>BI Solutions</b><br>Licensed engineers building smarter, compliant, data-driven operations.<br>Cityland Pasong Tamo, Makati City</div>
-  <div>+63 966 210 3220<br><a href="mailto:brenrelevo@gmail.com">brenrelevo@gmail.com</a><br><a href="mailto:ipdevenecia@gmail.com">ipdevenecia@gmail.com</a></div>
+  <div><b>BI SOLUTIONS — Smarter Systems. Better Business.</b>
+    <p>Professional business, regulatory, and data management solutions designed to help organizations operate efficiently and make informed decisions.</p>
+    <p>For product inquiries, consulting engagements, and business partnerships, please get in touch with our team.</p>
+    <p><a href="#store">Digital Store</a> | <a href="#services">Our Services</a> | <a href="#how">How It Works</a> | <a href="#faq">FAQ</a></p></div>
+  <div><b>Contact</b><p>Cityland Pasong Tamo, Makati City<br>+63 966 210 3220<br><a href="mailto:brenrelevo@gmail.com">brenrelevo@gmail.com</a><br><a href="mailto:ipdevenecia@gmail.com">ipdevenecia@gmail.com</a></p></div>
+  <div class="copy">© 2026 BI Solutions. All Rights Reserved.</div>
 </div></footer>
 
-<dialog id="dlg">
-  <form id="f" method="dialog">
-    <h3 id="ptitle">Order</h3>
-    <div id="pprice" class="price"></div>
+<dialog id="dlg"><div class="dbody">
+  <div id="v1">
+    <h3 id="pt"></h3><div class="price" id="pp"></div><p id="pd" style="color:var(--muted)"></p>
+    <h4>What's included</h4><ul id="pi"></ul>
+    <h4>Platform &amp; requirements</h4><ul id="pr"></ul>
+    <h4>Limitations</h4><ul id="pl"></ul>
+    <h4>How you receive it</h4><ul><li>After your payment is verified, we email the access or download link to the address you provide.</li></ul>
+    <div class="row"><button class="btn" id="go">Order this product</button><button class="btn ghost" data-close>Close</button></div>
+  </div>
+  <form id="v2" hidden>
+    <h3>Place your order</h3><div id="op" style="color:var(--muted)"></div>
     <label for="n">Full name</label><input id="n" required autocomplete="name">
-    <label for="e">Email (where we send the files)</label><input id="e" type="email" required autocomplete="email">
+    <label for="e">Email (where we send your product)</label><input id="e" type="email" required autocomplete="email">
     <label for="m">Mobile number</label><input id="m" type="tel" required autocomplete="tel">
-    <label for="pm">Payment method</label>
-    <select id="pm"><option>GCash</option><option>Bank transfer</option></select>
-    <div class="pay" id="payinfo"></div>
-    <div class="row"><button class="btn" type="submit">Place order</button><button class="btn ghost" type="button" id="cancel">Cancel</button></div>
-    <div class="msg" id="msg" role="status"></div>
+    <label for="pm">Payment method</label><select id="pm"></select>
+    <div class="row"><button class="btn" type="submit">Submit order</button><button class="btn ghost" type="button" id="back">Back</button></div>
+    <div class="msg" id="m2" role="status"></div>
   </form>
-</dialog>
+  <form id="v3" hidden>
+    <h3>Order received</h3>
+    <div class="box">Your order reference: <b id="ref"></b></div>
+    <div class="box" id="payinfo"></div>
+    <p style="font-size:.92rem;color:var(--muted)">Send the exact amount, then enter your payment reference number below. Your order stays Pending Verification until we confirm the funds in our account. Files are released only after verification.</p>
+    <label for="pr2">Payment reference number</label><input id="pr2" required>
+    <div class="row"><button class="btn" type="submit">Submit payment details</button><button class="btn ghost" type="button" data-close>Close</button></div>
+    <div class="msg" id="m3" role="status"></div>
+  </form>
+</div></dialog>
 
 <script>
 // ---- EDIT THESE ----
-const SCRIPT_URL = "";   // paste your Google Apps Script web app URL here
+const SCRIPT_URL = "";  // paste your Google Apps Script web app URL here (added in the next step)
+const SUPPORT_EMAIL = "brenrelevo@gmail.com";
 const PAYMENT = {
-  "GCash": "Send to GCash 0966 210 3220 (account name: YOUR NAME). Use your email as the reference.",
+  "GCash": "Send to GCash 0966 210 3220 (account name: YOUR NAME).",
   "Bank transfer": "Bank: YOUR BANK | Account name: YOUR NAME | Account no.: 0000-0000-00"
 };
-// Add products here. cat = Dashboards, Templates, Training, Tools, Documents... (any name; filter tabs appear automatically)
-// Optional: img:"filename.png" to show a product picture (upload it to the repo too)
+// Add products below. cat: any category name (filter tabs appear automatically). img: optional picture filename.
 const PRODUCTS = [
-  {id:"p1",t:"Your first product",d:"Placeholder: describe what the buyer gets, in one or two sentences.",cat:"Templates",f:["Excel"],p:999}
+  {id:"bir-2027",t:"SME BIR Records Tracker | 2027 Starter Edition",cat:"Finance & Accounting",p:999,f:["Google Sheets"],
+   d:"Organize your sales, purchases, expenses, and bookkeeping records in one easy-to-use Google Sheets system. Designed to help Philippine SMEs prepare their business records for BIR filing.",
+   inc:["Sales records","Purchase records","Expense records","Bookkeeping records","User guide"],
+   req:["Google Sheets (a free Google account is enough)","Delivered as a 'Make a copy' link"],
+   lim:["A recordkeeping and BIR-preparation support tool","It does not file BIR returns, issue authorized invoices, or replace registered books of accounts","It does not calculate every taxpayer's tax liability"]}
 ];
 // ---------------------
-const peso = n => "₱" + n.toLocaleString("en-PH");
-const grid = document.getElementById("grid"), filters = document.getElementById("filters");
-let active = "All";
+const $=id=>document.getElementById(id), peso=n=>"₱"+n.toLocaleString("en-PH");
+const grid=$("grid"), filters=$("filters"), dlg=$("dlg");
+let active="All", cur=null, ref="";
+const li=a=>a.map(x=>`<li>${x}</li>`).join("");
 function render(){
-  grid.innerHTML = "";
-  PRODUCTS.filter(x => active==="All" || x.cat===active).forEach(x=>{
-    const el = document.createElement("article"); el.className="card";
-    el.innerHTML = `<div class="thumb">${x.img?`<img src="${x.img}" alt="">`:"<i></i><i></i><i></i>"}<span class="cat">${x.cat}</span></div>
+  grid.innerHTML="";
+  PRODUCTS.filter(x=>active==="All"||x.cat===active).forEach(x=>{
+    const el=document.createElement("article"); el.className="card";
+    el.innerHTML=`<div class="thumb">${x.img?`<img src="${x.img}" alt="">`:"<i></i><i></i><i></i>"}<span class="cat">${x.cat}</span></div>
     <div class="body"><h3>${x.t}</h3><p>${x.d}</p><div class="tags">${(x.f||[]).map(s=>`<span>${s}</span>`).join("")}</div>
-    <div class="buy"><span class="price">${peso(x.p)}</span><button class="btn" data-id="${x.id}">Buy</button></div></div>`;
+    <div class="buy"><span class="price">${peso(x.p)}</span><span><button class="btn ghost" data-view="${x.id}">Details</button> <button class="btn" data-buy="${x.id}">Buy</button></span></div></div>`;
     grid.appendChild(el);
   });
 }
-const cats = ["All", ...new Set(PRODUCTS.map(p=>p.cat))];
-if(cats.length>2){
-  filters.hidden=false;
-  cats.forEach(c=>{
-    const b=document.createElement("button"); b.textContent=c; b.setAttribute("aria-pressed", c===active);
-    b.onclick=()=>{active=c;[...filters.children].forEach(x=>x.setAttribute("aria-pressed",x===b));render()};
-    filters.appendChild(b);
-  });
-}
+const cats=["All",...new Set(PRODUCTS.map(p=>p.cat))];
+if(cats.length>2){filters.hidden=false;cats.forEach(c=>{const b=document.createElement("button");b.textContent=c;b.setAttribute("aria-pressed",c===active);b.onclick=()=>{active=c;[...filters.children].forEach(x=>x.setAttribute("aria-pressed",x===b));render()};filters.appendChild(b)})}
 render();
-const dlg=document.getElementById("dlg"), msg=document.getElementById("msg"), pm=document.getElementById("pm"), info=document.getElementById("payinfo");
-const n=document.getElementById("n"), e_=document.getElementById("e"), m=document.getElementById("m");
-let cur=null;
-const showPay=()=>info.textContent=PAYMENT[pm.value];
-pm.onchange=showPay;
-grid.addEventListener("click",ev=>{
-  const b=ev.target.closest("button[data-id]"); if(!b) return;
-  cur=PRODUCTS.find(p=>p.id===b.dataset.id);
-  document.getElementById("ptitle").textContent=cur.t;
-  document.getElementById("pprice").textContent=peso(cur.p);
-  msg.textContent=""; showPay(); dlg.showModal();
-});
-document.getElementById("cancel").onclick=()=>dlg.close();
-document.getElementById("f").addEventListener("submit",async ev=>{
-  ev.preventDefault();
-  const data={product:cur.t,price:cur.p,name:n.value,email:e_.value,mobile:m.value,payment:pm.value};
-  msg.textContent="Sending your order...";
+const show=v=>["v1","v2","v3"].forEach(k=>$(k).hidden=k!==v);
+function open(id,order){
+  cur=PRODUCTS.find(p=>p.id===id);
+  $("pt").textContent=cur.t;$("pp").textContent=peso(cur.p);$("pd").textContent=cur.d;
+  $("pi").innerHTML=li(cur.inc||[]);$("pr").innerHTML=li(cur.req||[]);$("pl").innerHTML=li(cur.lim||[]);
+  $("pm").innerHTML=Object.keys(PAYMENT).map(k=>`<option>${k}</option>`).join("");
+  $("op").textContent=cur.t+" · "+peso(cur.p);$("m2").textContent="";$("m3").textContent="";
+  show(order?"v2":"v1");dlg.showModal();
+}
+grid.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.view)open(b.dataset.view,false);if(b.dataset.buy)open(b.dataset.buy,true)});
+$("go").onclick=()=>show("v2");$("back").onclick=()=>show("v1");
+dlg.addEventListener("click",e=>{if(e.target.closest("[data-close]"))dlg.close()});
+async function send(data,subject){
   try{
-    if(!SCRIPT_URL) throw new Error("no-backend");
+    if(!SCRIPT_URL)throw 0;
     await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(data)});
-    msg.textContent="Order received. Send your payment and proof, and we'll email your files after we verify it.";
-  }catch(err){
-    location.href=`mailto:brenrelevo@gmail.com?subject=${encodeURIComponent("Order: "+cur.t)}&body=${encodeURIComponent(Object.entries(data).map(([k,v])=>k+": "+v).join("\n"))}`;
-    msg.textContent="Opening your email app to send the order.";
+    return true;
+  }catch(_){
+    location.href=`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(Object.entries(data).map(([k,v])=>k+": "+v).join("\n"))}`;
+    return false;
   }
+}
+$("v2").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const d=new Date(),pad=x=>String(x).padStart(2,"0");
+  ref=`BI-${String(d.getFullYear()).slice(2)}${pad(d.getMonth()+1)}${pad(d.getDate())}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
+  $("m2").textContent="Submitting...";
+  await send({action:"order",ref,product:cur.t,price:cur.p,name:$("n").value,email:$("e").value,mobile:$("m").value,payment:$("pm").value,status:"Pending Payment"},"Order "+ref+": "+cur.t);
+  $("ref").textContent=ref;$("payinfo").textContent=PAYMENT[$("pm").value]+" Amount: "+peso(cur.p);show("v3");
+});
+$("v3").addEventListener("submit",async e=>{
+  e.preventDefault();$("m3").textContent="Submitting...";
+  const ok=await send({action:"payment",ref,paymentRef:$("pr2").value,status:"Pending Verification"},"Payment details for "+ref);
+  $("m3").textContent=ok?"Thank you. Your order is now Pending Verification. We'll email your product once payment is confirmed.":"Opening your email app to send your payment details.";
 });
 </script>
 </body>
