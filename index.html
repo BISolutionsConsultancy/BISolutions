@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BI Solutions Store | Dashboards and templates for growing businesses</title>
+<meta name="description" content="Ready-to-use Power BI, Excel and Google Sheets dashboards and trackers from licensed engineers. Built for SMEs in the Philippines.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1f3a6b;--ink:#0f1b33;--paper:#f3f5f9;--card:#fff;--line:#d9dfea;--blue:#2f7bd0;--muted:#55627a;--on-navy:#fff}
+@media (prefers-color-scheme:dark){:root{--paper:#0b1426;--card:#121f38;--ink:#eef2fa;--line:#27375a;--muted:#9fb0cf;--navy:#2c4f8f}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Schibsted Grotesk",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:900;font-size:1.2rem;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--blue)}
+nav a{margin-left:18px;text-decoration:none;font-weight:500;font-size:.95rem}
+.hero{padding:64px 0 48px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;font-weight:900}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:46ch;margin:0 0 26px}
+.btn{display:inline-block;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:12px 22px;font:700 1rem inherit;font-family:inherit;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--blue)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line);margin-left:8px}
+.mock{background:var(--navy);border-radius:14px;padding:16px;color:#fff;box-shadow:0 18px 40px rgba(15,27,51,.25)}
+.mock .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.mock .kpis div{background:rgba(255,255,255,.12);border-radius:8px;padding:8px 10px;font-size:.7rem}
+.mock .kpis b{display:block;font-size:1.1rem}
+.bars{display:flex;align-items:flex-end;gap:6px;height:120px;background:#fff;border-radius:8px;padding:10px}
+.bars i{flex:1;background:var(--blue);border-radius:3px 3px 0 0;transform-origin:bottom;animation:grow .9s ease-out both}
+@keyframes grow{from{transform:scaleY(0)}}
+@media (prefers-reduced-motion:reduce){.bars i{animation:none}}
+section{padding:48px 0}
+h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:130px;padding:14px;display:flex;align-items:flex-end;gap:5px}
+.thumb i{flex:1;background:rgba(255,255,255,.85);border-radius:2px 2px 0 0}
+.card .body{padding:18px;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 6px;font-size:1.15rem}
+.card p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tags span{border:1px solid var(--line);border-radius:99px;padding:2px 10px;font-size:.78rem}
+.buy{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
+.price{font-size:1.4rem;font-weight:900}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.how div{border-left:4px solid var(--blue);padding:4px 0 4px 14px}
+.how b{display:block;margin-bottom:4px}
+.how p{margin:0;color:var(--muted);font-size:.95rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{background:var(--navy);color:#fff;padding:36px 0;margin-top:30px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+footer a{color:#fff}
+dialog{border:0;border-radius:14px;padding:0;width:min(480px,94vw);background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(8,14,28,.6)}
+dialog form{padding:24px}
+dialog h3{margin:0 0 4px}
+label{display:block;font-weight:500;font-size:.9rem;margin:12px 0 4px}
+input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--paper);color:var(--ink)}
+.pay{background:var(--paper);border-radius:8px;padding:12px;font-size:.9rem;margin-top:12px}
+.row{display:flex;gap:10px;margin-top:18px}
+.msg{margin-top:12px;font-weight:500}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}nav a:not(.keep){display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#">BI<span>.</span> Solutions Store</a>
+  <nav><a href="#products">Products</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="keep" href="#contact">Contact</a></nav>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Dashboards your team will actually use.</h1>
+    <p>Ready-made Power BI, Excel and Google Sheets dashboards and trackers, designed by licensed engineers for growing businesses. Download, plug in your data, and start tracking.</p>
+    <a class="btn" href="#products">Browse dashboards</a><a class="btn ghost" href="#how">How it works</a>
+  </div>
+  <div class="mock" aria-hidden="true">
+    <div class="kpis"><div>Total revenue<b>₱52.4M</b></div><div>Gross profit<b>₱18.7M</b></div><div>Orders<b>12,842</b></div></div>
+    <div class="bars"><i style="height:35%"></i><i style="height:48%;animation-delay:.05s"></i><i style="height:42%;animation-delay:.1s"></i><i style="height:60%;animation-delay:.15s"></i><i style="height:55%;animation-delay:.2s"></i><i style="height:72%;animation-delay:.25s"></i><i style="height:66%;animation-delay:.3s"></i><i style="height:88%;animation-delay:.35s"></i></div>
+  </div>
+</div></div>
+
+<section id="products"><div class="wrap">
+  <h2>Dashboards and templates</h2>
+  <p class="sub">Each one is built from real client workflows, not generic layouts. Sample data is included so you can see how it works before adding your own.</p>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2>How it works</h2>
+  <p class="sub">No account needed. Pay by GCash or bank transfer and get your files by email.</p>
+  <div class="how">
+    <div><b>Pick a product</b><p>Click Buy and fill in your details.</p></div>
+    <div><b>Send payment</b><p>Pay via GCash or bank transfer and upload or reply with your proof of payment.</p></div>
+    <div><b>Receive your files</b><p>We verify the payment and email your download link, usually within one business day.</p></div>
+    <div><b>Need it customized?</b><p>We also build dashboards around your own data. Message us for a quote.</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <details><summary>Which software do I need?</summary><p>Each product page lists its format: Power BI Desktop (free), Microsoft Excel, or Google Sheets (free with a Google account).</p></details>
+  <details><summary>Can I use my own data?</summary><p>Yes. Every template includes a data sheet where you paste or connect your own figures. The charts update automatically.</p></details>
+  <details><summary>Can you customize a dashboard for my business?</summary><p>Yes. Contact us with your process and data sources and we'll send a quote.</p></details>
+  <details><summary>What if something doesn't work?</summary><p>Email us and we'll help you get it running or send a corrected file.</p></details>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <div><b>BI Solutions</b><br>Licensed engineers building smarter, compliant, data-driven operations.<br>Cityland Pasong Tamo, Makati City</div>
+  <div>+63 966 210 3220<br><a href="mailto:brenrelevo@gmail.com">brenrelevo@gmail.com</a><br><a href="mailto:ipdevenecia@gmail.com">ipdevenecia@gmail.com</a></div>
+</div></footer>
+
+<dialog id="dlg">
+  <form id="f" method="dialog">
+    <h3 id="ptitle">Order</h3>
+    <div id="pprice" class="price"></div>
+    <label for="n">Full name</label><input id="n" required autocomplete="name">
+    <label for="e">Email (where we send the files)</label><input id="e" type="email" required autocomplete="email">
+    <label for="m">Mobile number</label><input id="m" type="tel" required autocomplete="tel">
+    <label for="pm">Payment method</label>
+    <select id="pm"><option>GCash</option><option>Bank transfer</option></select>
+    <div class="pay" id="payinfo"></div>
+    <div class="row"><button class="btn" type="submit">Place order</button><button class="btn ghost" type="button" id="cancel">Cancel</button></div>
+    <div class="msg" id="msg" role="status"></div>
+  </form>
+</dialog>
+
+<script>
+// ---- EDIT THESE ----
+const SCRIPT_URL = "";   // paste your Google Apps Script web app URL here
+const PAYMENT = {
+  "GCash": "Send to GCash 0966 210 3220 (account name: YOUR NAME). Use your email as the reference.",
+  "Bank transfer": "Bank: YOUR BANK | Account name: YOUR NAME | Account no.: 0000-0000-00"
+};
+const PRODUCTS = [
+  {id:"sales",t:"Executive Sales Dashboard",d:"Revenue trend, gross profit, top products, sales by region and channel.",f:["Power BI","Excel"],p:1499,c:"#1f3a6b",h:[40,55,48,70,62,85,78,92]},
+  {id:"project",t:"Project Monitoring Dashboard",d:"Track project status, budget vs actual, schedule and progress in one view.",f:["Power BI","Excel"],p:1299,c:"#1e6b3a",h:[30,50,65,45,70,60,80,75]},
+  {id:"hr",t:"HR Analytics Dashboard",d:"Headcount, turnover, hiring and training completion by department.",f:["Power BI","Excel"],p:1299,c:"#6b3aa0",h:[60,52,66,58,48,55,50,46]},
+  {id:"finance",t:"Financial Performance Dashboard",d:"Revenue vs expenses, expense breakdown, cash flow and net profit trend.",f:["Excel","Google Sheets"],p:1499,c:"#17336b",h:[50,70,55,75,60,80,68,90]},
+  {id:"retail",t:"Retail Analytics Dashboard",d:"Sales by category and store, top products, basket size and return rate.",f:["Power BI","Excel"],p:1299,c:"#0f6b5c",h:[45,60,52,68,74,58,82,70]},
+  {id:"cs",t:"Customer Service Dashboard",d:"Tickets by status and channel, response time and satisfaction trend.",f:["Excel","Google Sheets"],p:999,c:"#7a4a14",h:[55,48,62,58,66,52,70,64]}
+];
+const peso = n => "₱" + n.toLocaleString("en-PH");
+const grid = document.getElementById("grid");
+PRODUCTS.forEach(x=>{
+  const el = document.createElement("article"); el.className="card";
+  el.innerHTML = `<div class="thumb" style="background:${x.c}" aria-hidden="true">${x.h.map(v=>`<i style="height:${v}%"></i>`).join("")}</div>
+  <div class="body"><h3>${x.t}</h3><p>${x.d}</p><div class="tags">${x.f.map(s=>`<span>${s}</span>`).join("")}</div>
+  <div class="buy"><span class="price">${peso(x.p)}</span><button class="btn" data-id="${x.id}">Buy</button></div></div>`;
+  grid.appendChild(el);
+});
+const dlg=document.getElementById("dlg"), msg=document.getElementById("msg"), pm=document.getElementById("pm"), info=document.getElementById("payinfo");
+let cur=null;
+const showPay=()=>info.textContent=PAYMENT[pm.value];
+pm.onchange=showPay;
+grid.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-id]"); if(!b) return;
+  cur=PRODUCTS.find(p=>p.id===b.dataset.id);
+  document.getElementById("ptitle").textContent=cur.t;
+  document.getElementById("pprice").textContent=peso(cur.p);
+  msg.textContent=""; showPay(); dlg.showModal();
+});
+document.getElementById("cancel").onclick=()=>dlg.close();
+document.getElementById("f").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const data={product:cur.t,price:cur.p,name:n.value,email:e_.value,mobile:m.value,payment:pm.value};
+  msg.textContent="Sending your order...";
+  try{
+    if(!SCRIPT_URL) throw new Error("no-backend");
+    await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(data)});
+    msg.textContent="Order received. Send your payment and proof, and we'll email your files after we verify it.";
+  }catch(err){
+    location.href=`mailto:brenrelevo@gmail.com?subject=${encodeURIComponent("Order: "+cur.t)}&body=${encodeURIComponent(Object.entries(data).map(([k,v])=>k+": "+v).join("\n"))}`;
+    msg.textContent="Opening your email app to send the order.";
+  }
+});
+const e_=document.getElementById("e"), n=document.getElementById("n"), m=document.getElementById("m");
+</script>
+</body>
+</html>
