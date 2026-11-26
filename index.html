@@ -3,118 +3,128 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BI Solutions Store | Dashboards and templates for growing businesses</title>
-<meta name="description" content="Ready-to-use Power BI, Excel and Google Sheets dashboards and trackers from licensed engineers. Built for SMEs in the Philippines.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<title>BI Solutions Digital Store | Templates, dashboards, training and tools</title>
+<meta name="description" content="The digital store of BI Solutions: business templates, dashboards, training materials and tools from licensed engineers.">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1f3a6b;--ink:#0f1b33;--paper:#f3f5f9;--card:#fff;--line:#d9dfea;--blue:#2f7bd0;--muted:#55627a;--on-navy:#fff}
-@media (prefers-color-scheme:dark){:root{--paper:#0b1426;--card:#121f38;--ink:#eef2fa;--line:#27375a;--muted:#9fb0cf;--navy:#2c4f8f}}
+:root{--deep:#0f3468;--navy:#1b4f8f;--blue:#1b64a8;--sky:#3797cf;--mist:#dde9f1;--paper:#f4f8fb;--ink:#0d2140;--muted:#52647c;--line:#d3e0ea}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:"Schibsted Grotesk",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:5}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:900;font-size:1.2rem;text-decoration:none;letter-spacing:-.02em}
-.logo span{color:var(--blue)}
-nav a{margin-left:18px;text-decoration:none;font-weight:500;font-size:.95rem}
-.hero{padding:64px 0 48px}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;font-weight:900}
-.hero p{font-size:1.1rem;color:var(--muted);max-width:46ch;margin:0 0 26px}
-.btn{display:inline-block;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:12px 22px;font:700 1rem inherit;font-family:inherit;text-decoration:none;cursor:pointer}
-.btn:hover{background:var(--blue)}
-.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line);margin-left:8px}
-.mock{background:var(--navy);border-radius:14px;padding:16px;color:#fff;box-shadow:0 18px 40px rgba(15,27,51,.25)}
-.mock .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
-.mock .kpis div{background:rgba(255,255,255,.12);border-radius:8px;padding:8px 10px;font-size:.7rem}
-.mock .kpis b{display:block;font-size:1.1rem}
-.bars{display:flex;align-items:flex-end;gap:6px;height:120px;background:#fff;border-radius:8px;padding:10px}
-.bars i{flex:1;background:var(--blue);border-radius:3px 3px 0 0;transform-origin:bottom;animation:grow .9s ease-out both}
-@keyframes grow{from{transform:scaleY(0)}}
-@media (prefers-reduced-motion:reduce){.bars i{animation:none}}
-section{padding:48px 0}
-h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 8px}
-.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
-.thumb{height:130px;padding:14px;display:flex;align-items:flex-end;gap:5px}
-.thumb i{flex:1;background:rgba(255,255,255,.85);border-radius:2px 2px 0 0}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:50px;width:50px;object-fit:contain}
+.brand b{font-size:1.05rem;color:var(--deep);letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:.75rem}
+nav a{margin-left:20px;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--deep)}
+nav a:hover{color:var(--sky)}
+.hero{background:linear-gradient(135deg,var(--deep),var(--blue));color:#fff;padding:70px 0 64px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative}
+h1{font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;font-weight:900}
+.hero p{font-size:1.1rem;color:#d6e6f5;max-width:48ch;margin:0 0 26px}
+.btn{display:inline-block;background:var(--sky);color:#fff;border:0;border-radius:8px;padding:12px 22px;font:700 1rem inherit;font-family:inherit;text-decoration:none;cursor:pointer}
+.btn:hover{background:#2b86bf}
+.hero .btn{background:#fff;color:var(--deep)}
+.hero .btn:hover{background:var(--mist)}
+.btn.ghost{background:transparent;color:var(--deep);border:2px solid var(--line);margin-left:8px}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tiles div{border-radius:12px;padding:18px 14px;font-weight:700;color:#fff;min-height:92px;display:flex;align-items:flex-end}
+.tiles div:nth-child(1){background:rgba(255,255,255,.14)}
+.tiles div:nth-child(2){background:var(--sky)}
+.tiles div:nth-child(3){background:#0b2a55}
+.tiles div:nth-child(4){background:rgba(255,255,255,.14)}
+section{padding:52px 0}
+h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 8px;color:var(--deep)}
+.sub{color:var(--muted);margin:0 0 24px;max-width:62ch}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:7px 16px;font:500 .92rem inherit;font-family:inherit;color:var(--deep);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:140px;background:linear-gradient(135deg,var(--deep),var(--blue));position:relative;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb i{position:absolute;transform:rotate(45deg);border-radius:4px}
+.thumb i:nth-child(1){width:70px;height:70px;right:34px;top:34px;background:var(--sky)}
+.thumb i:nth-child(2){width:36px;height:36px;right:112px;top:84px;background:var(--mist);opacity:.9}
+.thumb i:nth-child(3){width:26px;height:26px;right:18px;top:96px;background:#0b2a55}
+.cat{position:absolute;left:12px;top:12px;background:#fff;color:var(--deep);font-size:.78rem;font-weight:700;border-radius:99px;padding:2px 10px}
 .card .body{padding:18px;display:flex;flex-direction:column;flex:1}
-.card h3{margin:0 0 6px;font-size:1.15rem}
+.card h3{margin:0 0 6px;font-size:1.15rem;color:var(--deep)}
 .card p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.tags span{border:1px solid var(--line);border-radius:99px;padding:2px 10px;font-size:.78rem}
+.tags span{background:var(--mist);color:var(--deep);border-radius:99px;padding:2px 10px;font-size:.78rem}
 .buy{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
-.price{font-size:1.4rem;font-weight:900}
+.price{font-size:1.4rem;font-weight:900;color:var(--deep)}
+.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.how div{border-left:4px solid var(--blue);padding:4px 0 4px 14px}
-.how b{display:block;margin-bottom:4px}
+.how div{border-left:4px solid var(--sky);padding:4px 0 4px 14px}
+.how b{display:block;margin-bottom:4px;color:var(--deep)}
 .how p{margin:0;color:var(--muted);font-size:.95rem}
-details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
-summary{font-weight:700;cursor:pointer}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;color:var(--deep)}
 details p{margin:10px 0 0;color:var(--muted)}
-footer{background:var(--navy);color:#fff;padding:36px 0;margin-top:30px}
+footer{background:var(--deep);color:#fff;padding:36px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
 footer a{color:#fff}
-dialog{border:0;border-radius:14px;padding:0;width:min(480px,94vw);background:var(--card);color:var(--ink)}
-dialog::backdrop{background:rgba(8,14,28,.6)}
+dialog{border:0;border-radius:14px;padding:0;width:min(480px,94vw);background:#fff;color:var(--ink)}
+dialog::backdrop{background:rgba(8,20,40,.6)}
 dialog form{padding:24px}
-dialog h3{margin:0 0 4px}
+dialog h3{margin:0 0 4px;color:var(--deep)}
 label{display:block;font-weight:500;font-size:.9rem;margin:12px 0 4px}
 input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--paper);color:var(--ink)}
-.pay{background:var(--paper);border-radius:8px;padding:12px;font-size:.9rem;margin-top:12px}
+.pay{background:var(--mist);border-radius:8px;padding:12px;font-size:.9rem;margin-top:12px}
 .row{display:flex;gap:10px;margin-top:18px}
 .msg{margin-top:12px;font-weight:500}
-@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}nav a:not(.keep){display:none}}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.brand small{display:none}nav a:not(.keep){display:none}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <a class="logo" href="#">BI<span>.</span> Solutions Store</a>
-  <nav><a href="#products">Products</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="keep" href="#contact">Contact</a></nav>
+  <a class="brand" href="#"><img src="logo.png" alt="BI Solutions logo"><b>BI Solutions<small>Digital Store</small></b></a>
+  <nav><a href="#products">Shop</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="keep" href="#contact">Contact</a></nav>
 </div></header>
 
 <main>
 <div class="hero"><div class="wrap">
   <div>
-    <h1>Dashboards your team will actually use.</h1>
-    <p>Ready-made Power BI, Excel and Google Sheets dashboards and trackers, designed by licensed engineers for growing businesses. Download, plug in your data, and start tracking.</p>
-    <a class="btn" href="#products">Browse dashboards</a><a class="btn ghost" href="#how">How it works</a>
+    <h1>The digital store of BI Solutions.</h1>
+    <p>Business-ready templates, dashboards, training materials and tools, made by licensed engineers. Buy once, download, and put them to work in your operations.</p>
+    <a class="btn" href="#products">Shop now</a><a class="btn ghost" href="#how">How it works</a>
   </div>
-  <div class="mock" aria-hidden="true">
-    <div class="kpis"><div>Total revenue<b>₱52.4M</b></div><div>Gross profit<b>₱18.7M</b></div><div>Orders<b>12,842</b></div></div>
-    <div class="bars"><i style="height:35%"></i><i style="height:48%;animation-delay:.05s"></i><i style="height:42%;animation-delay:.1s"></i><i style="height:60%;animation-delay:.15s"></i><i style="height:55%;animation-delay:.2s"></i><i style="height:72%;animation-delay:.25s"></i><i style="height:66%;animation-delay:.3s"></i><i style="height:88%;animation-delay:.35s"></i></div>
-  </div>
+  <div class="tiles" aria-hidden="true"><div>Dashboards</div><div>Templates</div><div>Training</div><div>Tools</div></div>
 </div></div>
 
 <section id="products"><div class="wrap">
-  <h2>Dashboards and templates</h2>
-  <p class="sub">Each one is built from real client workflows, not generic layouts. Sample data is included so you can see how it works before adding your own.</p>
+  <h2>Shop</h2>
+  <p class="sub">New products are added regularly. Every item is built from real client work, not generic filler.</p>
+  <div class="filters" id="filters" hidden></div>
   <div class="grid" id="grid"></div>
 </div></section>
 
-<section id="how"><div class="wrap">
+<section id="how" class="alt"><div class="wrap">
   <h2>How it works</h2>
   <p class="sub">No account needed. Pay by GCash or bank transfer and get your files by email.</p>
   <div class="how">
     <div><b>Pick a product</b><p>Click Buy and fill in your details.</p></div>
-    <div><b>Send payment</b><p>Pay via GCash or bank transfer and upload or reply with your proof of payment.</p></div>
+    <div><b>Send payment</b><p>Pay via GCash or bank transfer and send your proof of payment.</p></div>
     <div><b>Receive your files</b><p>We verify the payment and email your download link, usually within one business day.</p></div>
-    <div><b>Need it customized?</b><p>We also build dashboards around your own data. Message us for a quote.</p></div>
+    <div><b>Need something custom?</b><p>BI Solutions also does consulting, compliance and custom dashboards. Message us for a quote.</p></div>
   </div>
 </div></section>
 
 <section id="faq"><div class="wrap">
   <h2>Questions</h2>
-  <details><summary>Which software do I need?</summary><p>Each product page lists its format: Power BI Desktop (free), Microsoft Excel, or Google Sheets (free with a Google account).</p></details>
-  <details><summary>Can I use my own data?</summary><p>Yes. Every template includes a data sheet where you paste or connect your own figures. The charts update automatically.</p></details>
-  <details><summary>Can you customize a dashboard for my business?</summary><p>Yes. Contact us with your process and data sources and we'll send a quote.</p></details>
+  <details><summary>What can I buy here?</summary><p>Templates, dashboards, training materials, video tutorials and other digital tools. Each product page shows its format and what's included.</p></details>
+  <details><summary>How do I receive my purchase?</summary><p>After we confirm your payment, we email a download or access link to the address you provided.</p></details>
+  <details><summary>Can I get something customized?</summary><p>Yes. Contact us with your process and data sources and we'll send a quote.</p></details>
   <details><summary>What if something doesn't work?</summary><p>Email us and we'll help you get it running or send a corrected file.</p></details>
 </div></section>
 </main>
@@ -146,37 +156,50 @@ const PAYMENT = {
   "GCash": "Send to GCash 0966 210 3220 (account name: YOUR NAME). Use your email as the reference.",
   "Bank transfer": "Bank: YOUR BANK | Account name: YOUR NAME | Account no.: 0000-0000-00"
 };
+// Add products here. cat = Dashboards, Templates, Training, Tools, Documents... (any name; filter tabs appear automatically)
+// Optional: img:"filename.png" to show a product picture (upload it to the repo too)
 const PRODUCTS = [
-  {id:"sales",t:"Executive Sales Dashboard",d:"Revenue trend, gross profit, top products, sales by region and channel.",f:["Power BI","Excel"],p:1499,c:"#1f3a6b",h:[40,55,48,70,62,85,78,92]},
-  {id:"project",t:"Project Monitoring Dashboard",d:"Track project status, budget vs actual, schedule and progress in one view.",f:["Power BI","Excel"],p:1299,c:"#1e6b3a",h:[30,50,65,45,70,60,80,75]},
-  {id:"hr",t:"HR Analytics Dashboard",d:"Headcount, turnover, hiring and training completion by department.",f:["Power BI","Excel"],p:1299,c:"#6b3aa0",h:[60,52,66,58,48,55,50,46]},
-  {id:"finance",t:"Financial Performance Dashboard",d:"Revenue vs expenses, expense breakdown, cash flow and net profit trend.",f:["Excel","Google Sheets"],p:1499,c:"#17336b",h:[50,70,55,75,60,80,68,90]},
-  {id:"retail",t:"Retail Analytics Dashboard",d:"Sales by category and store, top products, basket size and return rate.",f:["Power BI","Excel"],p:1299,c:"#0f6b5c",h:[45,60,52,68,74,58,82,70]},
-  {id:"cs",t:"Customer Service Dashboard",d:"Tickets by status and channel, response time and satisfaction trend.",f:["Excel","Google Sheets"],p:999,c:"#7a4a14",h:[55,48,62,58,66,52,70,64]}
+  {id:"p1",t:"Your first product",d:"Placeholder: describe what the buyer gets, in one or two sentences.",cat:"Templates",f:["Excel"],p:999}
 ];
+// ---------------------
 const peso = n => "₱" + n.toLocaleString("en-PH");
-const grid = document.getElementById("grid");
-PRODUCTS.forEach(x=>{
-  const el = document.createElement("article"); el.className="card";
-  el.innerHTML = `<div class="thumb" style="background:${x.c}" aria-hidden="true">${x.h.map(v=>`<i style="height:${v}%"></i>`).join("")}</div>
-  <div class="body"><h3>${x.t}</h3><p>${x.d}</p><div class="tags">${x.f.map(s=>`<span>${s}</span>`).join("")}</div>
-  <div class="buy"><span class="price">${peso(x.p)}</span><button class="btn" data-id="${x.id}">Buy</button></div></div>`;
-  grid.appendChild(el);
-});
+const grid = document.getElementById("grid"), filters = document.getElementById("filters");
+let active = "All";
+function render(){
+  grid.innerHTML = "";
+  PRODUCTS.filter(x => active==="All" || x.cat===active).forEach(x=>{
+    const el = document.createElement("article"); el.className="card";
+    el.innerHTML = `<div class="thumb">${x.img?`<img src="${x.img}" alt="">`:"<i></i><i></i><i></i>"}<span class="cat">${x.cat}</span></div>
+    <div class="body"><h3>${x.t}</h3><p>${x.d}</p><div class="tags">${(x.f||[]).map(s=>`<span>${s}</span>`).join("")}</div>
+    <div class="buy"><span class="price">${peso(x.p)}</span><button class="btn" data-id="${x.id}">Buy</button></div></div>`;
+    grid.appendChild(el);
+  });
+}
+const cats = ["All", ...new Set(PRODUCTS.map(p=>p.cat))];
+if(cats.length>2){
+  filters.hidden=false;
+  cats.forEach(c=>{
+    const b=document.createElement("button"); b.textContent=c; b.setAttribute("aria-pressed", c===active);
+    b.onclick=()=>{active=c;[...filters.children].forEach(x=>x.setAttribute("aria-pressed",x===b));render()};
+    filters.appendChild(b);
+  });
+}
+render();
 const dlg=document.getElementById("dlg"), msg=document.getElementById("msg"), pm=document.getElementById("pm"), info=document.getElementById("payinfo");
+const n=document.getElementById("n"), e_=document.getElementById("e"), m=document.getElementById("m");
 let cur=null;
 const showPay=()=>info.textContent=PAYMENT[pm.value];
 pm.onchange=showPay;
-grid.addEventListener("click",e=>{
-  const b=e.target.closest("button[data-id]"); if(!b) return;
+grid.addEventListener("click",ev=>{
+  const b=ev.target.closest("button[data-id]"); if(!b) return;
   cur=PRODUCTS.find(p=>p.id===b.dataset.id);
   document.getElementById("ptitle").textContent=cur.t;
   document.getElementById("pprice").textContent=peso(cur.p);
   msg.textContent=""; showPay(); dlg.showModal();
 });
 document.getElementById("cancel").onclick=()=>dlg.close();
-document.getElementById("f").addEventListener("submit",async e=>{
-  e.preventDefault();
+document.getElementById("f").addEventListener("submit",async ev=>{
+  ev.preventDefault();
   const data={product:cur.t,price:cur.p,name:n.value,email:e_.value,mobile:m.value,payment:pm.value};
   msg.textContent="Sending your order...";
   try{
@@ -188,7 +211,6 @@ document.getElementById("f").addEventListener("submit",async e=>{
     msg.textContent="Opening your email app to send the order.";
   }
 });
-const e_=document.getElementById("e"), n=document.getElementById("n"), m=document.getElementById("m");
 </script>
 </body>
 </html>
