@@ -273,7 +273,7 @@ const TESTIMONIALS = [
 const PHONE = "+63 966 210 3220";   // shown in the contact pop-up
 // Payment methods. qr = filename of your QR image (upload it to the repository); leave "" to show details only.
 const PAYMENT = {
-  "QR Ph": {qr:"qrph.png", details:"Scan with any bank or e-wallet app that supports QR Ph (for example GCash or Maya). Account name: YOUR NAME"}
+  "QR Ph": {qr:"qrph.png", details:"Scan with any bank or e-wallet app that supports QR Ph (for example GCash or Maya)."}
 };
 // Add products below. cat: any category name (filter tabs appear automatically). img: optional picture filename.
 const PRODUCTS = [
@@ -351,7 +351,13 @@ const manyPay=Object.keys(PAYMENT).length>1;$("pmtabs").hidden=!manyPay;$("pmtab
 Object.keys(PAYMENT).forEach(k=>{const b=document.createElement("button");b.type="button";b.textContent=k;b.onclick=()=>showPay(k);$("pmtabs").appendChild(b)});
 async function send(data){
   if(SCRIPT_URL){
-    try{await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(data)});return true}catch(_){}
+    const opt={method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)};
+    try{
+      const r=await fetch(SCRIPT_URL,opt);const j=await r.json();
+      if(j&&j.ok)return true;
+    }catch(err){
+      if(err instanceof TypeError){try{await fetch(SCRIPT_URL,{...opt,mode:"no-cors"});return true}catch(_){}}
+    }
   }
   location.href=`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("New order "+data.ref+": "+data.product)}&body=${encodeURIComponent(Object.entries(data).map(([k,v])=>k+": "+v).join("\n"))}`;
   return false;
