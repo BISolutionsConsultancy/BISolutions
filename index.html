@@ -163,7 +163,7 @@ input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:
   <div class="cols">
     <div><b>01. Browse</b><p>Pick a product and read its details.</p></div>
     <div><b>02. Order</b><p>Fill in your name, email, and mobile number.</p></div>
-    <div><b>03. Pay</b><p>Pay by GCash or bank transfer, then enter your payment reference number.</p></div>
+    <div><b>03. Pay</b><p>Scan our QR Ph code to pay, then enter your payment reference number.</p></div>
     <div><b>04. Receive</b><p>Once we verify your payment, we email your access or download link.</p></div>
   </div>
 </div></section>
@@ -182,7 +182,7 @@ input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:
 <section id="faq" class="gray"><div class="wrap">
   <h2>Frequently Asked Questions</h2>
   <details><summary>What can I buy from the BI Solutions Digital Store?</summary><p>Our store offers ready-to-use business templates, spreadsheets, dashboards, and other management tools built for everyday operations. Each product page lists what is included, the platform it runs on (for example Google Sheets, Excel, or Power BI), and any limitations, so you know exactly what you are getting before you order.</p></details>
-  <details><summary>How do I order and pay?</summary><p>No account is needed. Choose a product, enter your name, email, and mobile number, and you will receive an order reference number with the payment details. You can pay by GCash or bank transfer, then enter your payment reference number on the same screen so we can match it to your order.</p></details>
+  <details><summary>How do I order and pay?</summary><p>No account is needed. Choose a product, enter your name, email, and mobile number, and you will see our QR Ph code with the exact amount to pay. Scan it with any bank or e-wallet app that supports QR Ph, then enter the reference number from your payment receipt so we can match it to your order.</p></details>
   <details><summary>How will I receive my purchase?</summary><p>Once we have verified your payment in our account, we email your access or download link to the address you provided. Please double-check your email address and look in your spam folder. If nothing arrives, contact us with your order reference number and we will check your order and resend the link.</p></details>
   <details><summary>What software do I need, and can I use my own data?</summary><p>It depends on the product, and each product page states the platform and requirements. A free Google account is enough for our Google Sheets products. The tools are designed so you can enter or paste your own figures, and each one comes with instructions to help you get started.</p></details>
   <details><summary>What consulting services does BI Solutions offer, and who do you work with?</summary><p>We offer regulatory and compliance support (ISO consultation, FDA LTO and CPR, and government permitting), business consulting and analysis (process mapping, KPIs, and business health checks), and data and management tools such as custom dashboards and trackers. We work with individuals, SMEs, growing organizations, and established corporations.</p></details>
@@ -218,23 +218,30 @@ input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:
     <div class="row"><button class="btn" id="go">Order this product</button><button class="btn ghost" data-close>Close</button></div>
   </div>
   <form id="v2" hidden>
-    <h3>Place your order</h3><div id="op" style="color:var(--muted)"></div>
+    <h3>Your details</h3><div id="op" style="color:var(--muted)"></div>
     <label for="n">Full name</label><input id="n" required autocomplete="name">
-    <label for="e">Email (where we send your product)</label><input id="e" type="email" required autocomplete="email">
+    <label for="e">Email (we send your product here)</label><input id="e" type="email" required autocomplete="email">
     <label for="m">Mobile number</label><input id="m" type="tel" required autocomplete="tel">
-    <label for="pm">Payment method</label><select id="pm"></select>
-    <div class="row"><button class="btn" type="submit">Submit order</button><button class="btn ghost" type="button" id="back">Back</button></div>
-    <div class="msg" id="m2" role="status"></div>
+    <div class="row"><button class="btn" type="submit">Continue to payment</button><button class="btn ghost" type="button" id="back">Back</button></div>
   </form>
   <form id="v3" hidden>
-    <h3>Order received</h3>
-    <div class="box">Your order reference: <b id="ref"></b></div>
-    <div class="box" id="payinfo"></div>
-    <p style="font-size:.92rem;color:var(--muted)">Send the exact amount, then enter your payment reference number below. Your order stays Pending Verification until we confirm the funds in our account. Files are released only after verification.</p>
+    <h3>Payment</h3>
+    <div class="box">Order reference: <b id="ref"></b><br>Product: <span id="pn"></span><br>Amount to pay: <b id="amt"></b></div>
+    <h4>Choose payment method</h4>
+    <div class="filters" id="pmtabs" style="margin:8px 0 0"></div>
+    <div class="box" style="text-align:center"><img id="qr" alt="Payment QR code" style="display:none;max-width:240px;width:100%;margin:0 auto 8px"><div id="payt"></div></div>
+    <p style="font-size:.92rem;color:var(--muted)">1. Scan the QR code (or use the account details) and pay the exact amount.<br>2. Enter the reference number from your payment receipt below.<br>3. Submit. We will verify your payment.</p>
     <label for="pr2">Payment reference number</label><input id="pr2" required>
-    <div class="row"><button class="btn" type="submit">Submit payment details</button><button class="btn ghost" type="button" data-close>Close</button></div>
+    <div class="row"><button class="btn" type="submit">Submit payment</button><button class="btn ghost" type="button" id="back2">Back</button></div>
     <div class="msg" id="m3" role="status"></div>
   </form>
+  <div id="v4" hidden>
+    <h3>Thank you for your order!</h3>
+    <div class="box">Order reference: <b id="ref2"></b></div>
+    <p>We are verifying your payment. Please wait up to <b>24 hours</b>. Once it is confirmed, we will email your product link or file, with instructions, to <b id="em"></b>.</p>
+    <p style="color:var(--muted);font-size:.92rem">Please check your spam folder too. If you have questions, contact us and mention your order reference number.</p>
+    <div class="row"><button class="btn" type="button" data-close>Close</button></div>
+  </div>
 </div></dialog>
 
 <script>
@@ -264,9 +271,9 @@ const TESTIMONIALS = [
   {quote:"Thank you ulit! Will definitely contact you again kapag may new project."}
 ];
 const PHONE = "+63 966 210 3220";   // shown in the contact pop-up
+// Payment methods. qr = filename of your QR image (upload it to the repository); leave "" to show details only.
 const PAYMENT = {
-  "GCash": "Send to GCash 0966 210 3220 (account name: YOUR NAME).",
-  "Bank transfer": "Bank: YOUR BANK | Account name: YOUR NAME | Account no.: 0000-0000-00"
+  "QR Ph": {qr:"qrph.png", details:"Scan with any bank or e-wallet app that supports QR Ph (for example GCash or Maya). Account name: YOUR NAME"}
 };
 // Add products below. cat: any category name (filter tabs appear automatically). img: optional picture filename.
 const PRODUCTS = [
@@ -301,7 +308,7 @@ function render(){
 const cats=["All",...new Set(PRODUCTS.map(p=>p.cat))];
 if(cats.length>2){filters.hidden=false;cats.forEach(c=>{const b=document.createElement("button");b.textContent=c;b.setAttribute("aria-pressed",c===active);b.onclick=()=>{active=c;[...filters.children].forEach(x=>x.setAttribute("aria-pressed",x===b));render()};filters.appendChild(b)})}
 render();
-const show=v=>["v1","v2","v3"].forEach(k=>$(k).hidden=k!==v);
+const show=v=>["v1","v2","v3","v4"].forEach(k=>$(k).hidden=k!==v);
 function gallery(shots){
   const g=$("gal");
   if(!shots||!shots.length){g.hidden=true;g.innerHTML="";return}
@@ -315,12 +322,11 @@ function open(id,order){
   cur=PRODUCTS.find(p=>p.id===id);
   gallery(cur.shots);$("pt").textContent=cur.t;$("pp").textContent=peso(cur.p);$("pd").textContent=cur.d;
   $("pi").innerHTML=li(cur.inc||[]);$("pr").innerHTML=li(cur.req||[]);$("pl").innerHTML=li(cur.lim||[]);$("plw").hidden=!(cur.lim&&cur.lim.length);
-  $("pm").innerHTML=Object.keys(PAYMENT).map(k=>`<option>${k}</option>`).join("");
-  $("op").textContent=cur.t+" · "+peso(cur.p);$("m2").textContent="";$("m3").textContent="";
+  $("op").textContent=cur.t+" · "+peso(cur.p);$("m3").textContent="";
   show(order?"v2":"v1");dlg.showModal();
 }
 grid.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.view)open(b.dataset.view,false);if(b.dataset.buy)open(b.dataset.buy,true)});
-$("go").onclick=()=>show("v2");$("back").onclick=()=>show("v1");
+$("go").onclick=()=>show("v2");$("back").onclick=()=>show("v1");$("back2").onclick=()=>show("v2");
 if(TESTIMONIALS.length){
   TESTIMONIALS.forEach(t=>{const b=document.createElement("blockquote"),p=document.createElement("p");
     p.textContent="“"+t.quote+"”";b.appendChild(p);if(t.name){const c=document.createElement("cite");c.textContent=t.name;b.appendChild(c)}if(t.role){const r=document.createElement("small");r.textContent=t.role;b.appendChild(r)}$("revGrid").appendChild(b)});
@@ -333,28 +339,36 @@ $("cem2").textContent=CONTACT_EMAIL2;$("cem2").href="mailto:"+CONTACT_EMAIL2;
 document.addEventListener("click",e=>{if(e.target.closest("[data-contact]")){e.preventDefault();cd.showModal()}});
 cd.addEventListener("click",e=>{if(e.target.closest("[data-close]")||e.target===cd)cd.close()});
 dlg.addEventListener("click",e=>{if(e.target.closest("[data-close]"))dlg.close()});
-async function send(data,subject){
-  try{
-    if(!SCRIPT_URL)throw 0;
-    await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(data)});
-    return true;
-  }catch(_){
-    location.href=`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(Object.entries(data).map(([k,v])=>k+": "+v).join("\n"))}`;
-    return false;
-  }
+let method=Object.keys(PAYMENT)[0];
+function showPay(m){
+  method=m;const p=PAYMENT[m],q=$("qr");
+  [...$("pmtabs").children].forEach(b=>b.setAttribute("aria-pressed",b.textContent===m));
+  $("payt").textContent=p.details;q.style.display="none";
+  if(p.qr){q.onload=()=>q.style.display="block";q.onerror=()=>q.style.display="none";q.src=p.qr;q.alt=m+" QR code"}
 }
-$("v2").addEventListener("submit",async e=>{
+$("pmtabs").innerHTML="";
+const manyPay=Object.keys(PAYMENT).length>1;$("pmtabs").hidden=!manyPay;$("pmtabs").previousElementSibling.hidden=!manyPay;
+Object.keys(PAYMENT).forEach(k=>{const b=document.createElement("button");b.type="button";b.textContent=k;b.onclick=()=>showPay(k);$("pmtabs").appendChild(b)});
+async function send(data){
+  if(SCRIPT_URL){
+    try{await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(data)});return true}catch(_){}
+  }
+  location.href=`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("New order "+data.ref+": "+data.product)}&body=${encodeURIComponent(Object.entries(data).map(([k,v])=>k+": "+v).join("\n"))}`;
+  return false;
+}
+$("v2").addEventListener("submit",e=>{
   e.preventDefault();
   const d=new Date(),pad=x=>String(x).padStart(2,"0");
-  ref=`BI-${String(d.getFullYear()).slice(2)}${pad(d.getMonth()+1)}${pad(d.getDate())}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
-  $("m2").textContent="Submitting...";
-  await send({action:"order",ref,product:cur.t,price:cur.p,name:$("n").value,email:$("e").value,mobile:$("m").value,payment:$("pm").value,status:"Pending Payment"},"Order "+ref+": "+cur.t);
-  $("ref").textContent=ref;$("payinfo").textContent=PAYMENT[$("pm").value]+" Amount: "+peso(cur.p);show("v3");
+  if(!ref||!ref.startsWith("BI-"))ref=`BI-${String(d.getFullYear()).slice(2)}${pad(d.getMonth()+1)}${pad(d.getDate())}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
+  $("ref").textContent=ref;$("pn").textContent=cur.t;$("amt").textContent=peso(cur.p);
+  showPay(method);show("v3");
 });
 $("v3").addEventListener("submit",async e=>{
   e.preventDefault();$("m3").textContent="Submitting...";
-  const ok=await send({action:"payment",ref,paymentRef:$("pr2").value,status:"Pending Verification"},"Payment details for "+ref);
-  $("m3").textContent=ok?"Thank you. Your order is now Pending Verification. We'll email your product once payment is confirmed.":"Opening your email app to send your payment details.";
+  const ok=await send({action:"order",ref,date:new Date().toISOString(),product:cur.t,price:cur.p,name:$("n").value,email:$("e").value,mobile:$("m").value,payment:method,paymentRef:$("pr2").value,status:"Pending Verification"});
+  $("m3").textContent="";$("ref2").textContent=ref;$("em").textContent=$("e").value;
+  if(ok)show("v4"); else $("m3").textContent="Your email app will open so you can send your order. Your order is complete once we receive that email.";
+  ref="";
 });
 </script>
 </body>
