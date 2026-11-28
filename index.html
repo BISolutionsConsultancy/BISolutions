@@ -96,7 +96,7 @@ input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:
 <body>
 <header><div class="wrap">
   <a class="brand" href="#home"><img src="logo.png" alt="BI Solutions logo">BI Solutions</a>
-  <nav><a href="#store">Digital Store</a><a href="#services">About &amp; Services</a><a class="keep" href="#contact">Contact</a></nav>
+  <nav><a href="#store">Digital Store</a><a href="#services">About &amp; Services</a><a class="keep" href="#contact" data-contact>Contact Us</a></nav>
 </div></header>
 
 <main>
@@ -248,6 +248,7 @@ const TESTIMONIALS = [
   {quote:"Thank you for explaining everything clearly. Malaking tulong po talaga."},
   {quote:"Very smooth yung coordination with your team. Thank you for being so accommodating!"},
   {quote:"Thank you for assisting us throughout the process. We really appreciate your help!"},
+  {quote:"Thank you for always accommodating our questions. Very helpful po kayo!"},
   {quote:"Will surely recommend your services. Thank you for all the help!"},
   {quote:"Thank you ulit! Will definitely contact you again kapag may new project."}
 ];
@@ -308,7 +309,7 @@ const cd=$("cdlg");
 $("cph").textContent=PHONE;$("cph").href="tel:"+PHONE.replace(/\s/g,"");
 $("cem").textContent=SUPPORT_EMAIL;$("cem").href="mailto:"+SUPPORT_EMAIL;
 $("cem2").textContent=CONTACT_EMAIL2;$("cem2").href="mailto:"+CONTACT_EMAIL2;
-document.addEventListener("click",e=>{if(e.target.closest("[data-contact]"))cd.showModal()});
+document.addEventListener("click",e=>{if(e.target.closest("[data-contact]")){e.preventDefault();cd.showModal()}});
 cd.addEventListener("click",e=>{if(e.target.closest("[data-close]")||e.target===cd)cd.close()});
 dlg.addEventListener("click",e=>{if(e.target.closest("[data-close]"))dlg.close()});
 async function send(data,subject){
